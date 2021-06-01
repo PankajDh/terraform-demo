@@ -1,13 +1,14 @@
 # Infastructure as Code - Terraform
 ***
 
-You can use the [editor on GitHub](https://github.com/PankajDh/terraform-demo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+We will be creating some basic AWS infra to learn basic terraform
+Follow all the steps and if you have any doubt you can reach out to Pankaj, Ayush, Himanshu or Aman
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Prerequisites
 
-### Markdown
+1. Install terraform from https://learn.hashicorp.com/tutorials/terraform/install-cli
+2. Create an AWS free tier account
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
