@@ -22,11 +22,36 @@ Follow all the steps and if you have any doubt you can reach out to Pankaj, Ayus
 2. Main.tf will have all the logic, variable.tf will have all the variable details and output.tf will be used for returns
 3. Terraform concats all the files before running
 
-### Code
-1. 
+#### Now Let's Code
+1. Tell terafrom where to create the infra 
+```
+provider "aws" {
+  region = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
+}
+```
+2. Create ec2 instance 
+```
+resource "aws_instance" "my_server" {
+  ami           = var.ami
+  instance_type = var.instance_type
+}
+```
+3. Create s3 bucket
+```
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = var.s3_bucket_name
 
-
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+  # enabling versioning so that we can revert back anytime easily
+  versioning {
+    enabled = var.enable_versioning
+  }
+}
+```
+4. Run `terraform init`
+5. Run `terraform fmt`. This command formats your code
+6. Run `terraform validate`
+7. Run `terraform plan`
+8. Run `terraform apply`
+9. *Modules* 
