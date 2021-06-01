@@ -23,7 +23,7 @@ Follow all the steps and if you have any doubt you can reach out to Pankaj, Ayus
 3. Terraform concats all the files before running
 
 #### Now Let's Code
-1. Tell terafrom where to create the infra 
+* Tell terafrom where to create the infra 
 ```
 provider "aws" {
   region = var.region
@@ -31,14 +31,14 @@ provider "aws" {
   secret_key = var.secret_key
 }
 ```
-2. Create ec2 instance 
+* Create ec2 instance 
 ```
 resource "aws_instance" "my_server" {
   ami           = var.ami
   instance_type = var.instance_type
 }
 ```
-3. Create s3 bucket
+* Create s3 bucket
 ```
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.s3_bucket_name
@@ -49,9 +49,23 @@ resource "aws_s3_bucket" "terraform_state" {
   }
 }
 ```
-4. Run `terraform init`
-5. Run `terraform fmt`. This command formats your code
-6. Run `terraform validate`
-7. Run `terraform plan`
-8. Run `terraform apply`
-9. *Modules* 
+* Create variables 
+  ```
+  ```
+* Run `terraform init`
+* Run `terraform fmt`. This command formats your code
+* Run `terraform validate`
+* Run `terraform plan`
+* Run `terraform apply`
+
+**Modules**
+* Create a folder template using `mkdir template` 
+* Copy main.tf, variable.tf and output.tf into this folder
+* Now create main.tf in the root
+    ```
+      module "create-templated-infra" {
+        source = "./template"
+        
+        region = "ap-south-1"
+      }
+    ```
