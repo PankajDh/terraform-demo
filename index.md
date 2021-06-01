@@ -4,35 +4,28 @@
 We will be creating some basic AWS infra to learn basic terraform
 Follow all the steps and if you have any doubt you can reach out to Pankaj, Ayush, Himanshu or Aman
 
-## Prerequisites
+### Prerequisites
 
 1. Install terraform from https://learn.hashicorp.com/tutorials/terraform/install-cli
 2. Create an AWS free tier account
 
+### Get Started
 
-```markdown
-Syntax highlighted code block
+#### Get AWS Credentials
+1. Login to your AWS console
+2. Click on your name on the right top corner and then click `My Security Credentails`
+3. Copy access key id and create access key
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+#### File Structure
+1. Create three files main.tf, variable.tf and output.tf in the root
+2. Main.tf will have all the logic, variable.tf will have all the variable details and output.tf will be used for returns
+3. Terraform concats all the files before running
 
-1. Numbered
-2. List
+### Code
+1. 
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PankajDh/terraform-demo/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
