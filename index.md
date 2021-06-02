@@ -49,13 +49,25 @@ resource "aws_s3_bucket" "terraform_state" {
   }
 }
 ```
-* Create variables [variables.tf](variables.md)
+* Create variables [variable.tf](variable.tf)
   
 * Run `terraform init`
 * Run `terraform fmt`. This command formats your code
 * Run `terraform validate`
 * Run `terraform plan`
 * Run `terraform apply`
+
+* Create output 
+  ```
+    output "ec2_id" {
+    value = aws_instance.my_server.id
+    }
+  ```
+  ```
+    output "s3_arn" {
+    value = aws_s3_bucket.terraform_state.arn
+    }
+  ```
 
 **Modules**
 * Create a folder template using `mkdir template` 
@@ -64,7 +76,8 @@ resource "aws_s3_bucket" "terraform_state" {
     ```
       module "create-templated-infra" {
         source = "./template"
-        
-        region = "ap-south-1"
       }
     ```
+    
+ ## More Curious ? 
+ You can clone the shipsy infra repo or shipsy internal auth repo and start experimenting 
