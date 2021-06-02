@@ -74,5 +74,5 @@ resource "aws_s3_bucket" "terraform_state" {
       }
     ```
     
- ## More Curious ? 
+### More Curious ? 
  You can clone the shipsy infra repo or shipsy internal auth repo and start experimenting 
