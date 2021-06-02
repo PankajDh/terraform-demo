@@ -31,22 +31,17 @@ provider "aws" {
   secret_key = var.secret_key
 }
 ```
-* Create ec2 instance 
+* Create ec2 instance https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 ```
 resource "aws_instance" "my_server" {
   ami           = var.ami
   instance_type = var.instance_type
 }
 ```
-* Create s3 bucket
+* Create s3 bucket https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 ```
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.s3_bucket_name
-
-  # enabling versioning so that we can revert back anytime easily
-  versioning {
-    enabled = var.enable_versioning
-  }
 }
 ```
 * Create variables [variable.tf](variable.tf)
