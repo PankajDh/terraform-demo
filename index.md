@@ -50,7 +50,7 @@ resource "aws_s3_bucket" "terraform_state" {
 }
 ```
 * Create variables 
-  ```
+  ```   
   ```
 * Run `terraform init`
 * Run `terraform fmt`. This command formats your code
