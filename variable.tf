@@ -8,13 +8,13 @@ variable "region" {
 variable "access_key" {
     description = "the access key of the aws account"
     type = string 
-    default = "AKIAT3ARS5FLKKGSGUU5"
+    default = 
 }
 
 variable "secret_key" {
     description = "the access key of the aws account"
     type = string 
-    default = "8TAaZ2z1IXeD4BAzRM01r7Jmzpxw/Q9wG2SD4vxP"
+    default = 
 }
 
 variable "s3_bucket_name" {
