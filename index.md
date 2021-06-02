@@ -49,9 +49,8 @@ resource "aws_s3_bucket" "terraform_state" {
   }
 }
 ```
-* Create variables 
-  ```   
-  ```
+* Create variables [variables.tf](variables.md)
+  
 * Run `terraform init`
 * Run `terraform fmt`. This command formats your code
 * Run `terraform validate`
