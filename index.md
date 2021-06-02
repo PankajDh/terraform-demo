@@ -2,7 +2,7 @@
 ***
 
 We will be creating some basic AWS infra to learn basic terraform
-Follow all the steps and if you have any doubt you can reach out to Pankaj, Ayush, Himanshu or Aman
+Follow all the steps and if you have any doubt you can reach out to me
 
 ### Prerequisites
 
@@ -73,6 +73,4 @@ resource "aws_s3_bucket" "terraform_state" {
         source = "./template"
       }
     ```
-    
-### More Curious ? 
- You can clone the shipsy infra repo or shipsy internal auth repo and start experimenting 
+     
